@@ -12,13 +12,12 @@ import java.util.StringTokenizer;
 public class P1991 {
     static int N;
     static StringTokenizer st;
-    static Map<String, Node> nodeMap = new HashMap<>();
+    static Map<String, Node> nodeMap = new HashMap<>(); // 노드 정보 저장 
 
     public static class Node{
-        // Object data;
-        String data;
-        Node left;
-        Node right;
+        String data; // 노드 데이터
+        Node left; // 왼쪽 자식 노드
+        Node right; // 오른쪽 자식 노드 
 
         // 초기화
         public Node(String data){
@@ -28,15 +27,15 @@ public class P1991 {
         }
     }
 
-     // 전위순회
+     // 전위순회(루트 - 왼 - 오)
      public static void preOrder(Node node) {
-        if(node == null) return;
-        System.out.printf(node.data);
-        preOrder(node.left);
-        preOrder(node.right);
+        if(node == null) return; // 자식 노드 없는 경우 순회 종료 
+        System.out.printf(node.data); // 현재 노드 방문
+        preOrder(node.left); // 왼쪽 노드 방문
+        preOrder(node.right); // 오른쪽 노드 방문 
      }
 
-     // 중위순회
+     // 중위순회(왼 - 루트 - 오)
      public static void inOrder(Node node) {
         if(node == null) return;
         inOrder(node.left);
@@ -44,7 +43,7 @@ public class P1991 {
         inOrder(node.right);
      }
 
-     // 후위순회
+     // 후위순회(왼 - 오 - 루트)
      public static void postOrder(Node node) {
         if(node == null) return;
         postOrder(node.left);
