@@ -26,4 +26,5 @@ public class Main {
         String str = sc.next();
         System.out.println(T.solution(str));
     }
+
 }
