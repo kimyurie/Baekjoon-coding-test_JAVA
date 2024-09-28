@@ -1,5 +1,5 @@
 // https://cote.inflearn.com/contest/10/problem/01-04
-package STD.단어뒤집기;
+package String.단어뒤집기;
 
 import java.util.*;
 

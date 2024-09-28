@@ -1,4 +1,4 @@
-package STD.대소문자변환;
+package String.대소문자변환;
 
 import java.util.*;
 

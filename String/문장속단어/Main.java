@@ -1,4 +1,4 @@
-package STD.문장속단어;
+package String.문장속단어;
 
 import  java.util.*;
 
